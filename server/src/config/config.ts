@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
 
-const PORT: string = process.env.PORT || '5000';
+const PORT: string = process.env.PORT || '4000';
 
 export default {
   PORT,
