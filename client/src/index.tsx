@@ -10,7 +10,7 @@ import './styles.css';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'https://warehouse-legacy-api.herokuapp.com/graphql',
 });
 const client = new ApolloClient({
   link: (link as unknown) as ApolloLink,
