@@ -11,7 +11,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div style={{ margin: '20px' }}>
+      <div className='wrapper'>
         <h1 className='main-header'>Warehouse</h1>
         <h3 className='sub-header'>Show me:</h3>
         <div className='categories'>

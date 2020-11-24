@@ -9,6 +9,10 @@ body {
   padding: 0;
 }
 
+.wrapper {
+  margin: 1rem;
+}
+
 .main-header,
 .sub-header {
   text-align: center;

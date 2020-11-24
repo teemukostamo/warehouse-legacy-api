@@ -1,5 +1,5 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { ImDroplet } from 'react-icons/im';
 
 interface Props {
@@ -12,18 +12,16 @@ const Color: React.FC<Props> = ({ colors }) => {
   }
 
   return (
-    <div>
-      {colors.map((color, index) => (
-        <>
-          <ImDroplet
-            key={index}
-            style={{ marginLeft: '6px' }}
-            size={15}
-            color={`${color}`}
-          />
-        </>
+    <>
+      {colors.map((color) => (
+        <ImDroplet
+          key={uuidv4()}
+          style={{ marginLeft: '6px' }}
+          size={15}
+          color={`${color}`}
+        />
       ))}
-    </div>
+    </>
   );
 };
 

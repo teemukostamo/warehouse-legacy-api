@@ -32,20 +32,26 @@ const Products: React.FC<Props> = ({ products, loading, error }) => {
 
   const Row: React.FC<RowProps> = ({ index, style }) => (
     <div className={index % 2 ? 'ListItemOdd' : 'ListItemEven'} style={style}>
-      <div className='flex-item'>
+      <div className='product-index flex-item'>
         {index + 1} of {products.products.length}
       </div>
-      <div className='flex-item fg-2'>{products.products[index].name}</div>
-      <div className='flex-item'>{products.products[index].manufacturer}</div>
-      <div className='flex-item'>
+      <div className='product-name flex-item fg-2'>
+        {products.products[index].name}
+      </div>
+      <div className='product-manufacturer flex-item'>
+        {products.products[index].manufacturer}
+      </div>
+      <div className='product-availability flex-item'>
         <Availability
           availability={products.products[index].availability.DATAPAYLOAD}
         />
       </div>
-      <div className='flex-item'>
+      <div className='product-colors flex-item'>
         <Color colors={products.products[index].color} />
       </div>
-      <div className='flex-item'>{products.products[index].price},00€</div>
+      <div className='product-price flex-item'>
+        {products.products[index].price},00€
+      </div>
     </div>
   );
 
@@ -60,10 +66,10 @@ const Products: React.FC<Props> = ({ products, loading, error }) => {
       <AutoSizer>
         {({ width }) => (
           <List
-            height={410}
+            height={400}
+            width={width}
             itemCount={products.products.length}
             itemSize={35}
-            width={width}
           >
             {Row}
           </List>
