@@ -1,11 +1,12 @@
 {
-  "name": "ts-react-node-monorepo",
+  "name": "warehouse-legacy-api",
   "version": "1.0.0",
-  "description": "A template for a single repository TypeScript React/Nodejs application.",
+  "description": "A Node/Graphql/Apollo/React application to fetch product availability information from a warehouse's legacy API",
   "main": "index.js",
   "scripts": {
     "build": "tsc && npm run build:ui",
     "build:ui": "cd client && npm install && npm run build",
+    "deploy:full": "git add . && git commit -m 'full deploy' && git push -u origin master && npm run build:ui && git push heroku master",
     "dev": "cross-env NODE_ENV=development ts-node-dev ./server/index.ts",
     "lint": "eslint --ext .ts,.tsx ./",
     "start": "cross-env NODE_ENV=production node ./server/build/index.js",

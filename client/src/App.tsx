@@ -9,6 +9,10 @@ const App: React.FC = () => {
   const jackets = useProducts('jackets');
   const accessories = useProducts('accessories');
 
+  if (shirts.error || jackets.error || accessories.error) {
+    return <div>connection to server timed out. please reload the page.</div>;
+  }
+
   return (
     <Router>
       <div className='wrapper'>
@@ -29,23 +33,14 @@ const App: React.FC = () => {
           <Route exact path='/accessories'>
             <Products
               loading={accessories.loading}
-              error={accessories.error}
               products={accessories.products}
             />
           </Route>
           <Route exact path='/jackets'>
-            <Products
-              loading={jackets.loading}
-              error={jackets.error}
-              products={jackets.products}
-            />
+            <Products loading={jackets.loading} products={jackets.products} />
           </Route>
           <Route exact path='/shirts'>
-            <Products
-              loading={shirts.loading}
-              error={shirts.error}
-              products={shirts.products}
-            />
+            <Products loading={shirts.loading} products={shirts.products} />
           </Route>
         </Switch>
       </div>

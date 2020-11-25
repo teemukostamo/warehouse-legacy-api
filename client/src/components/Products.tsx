@@ -1,5 +1,4 @@
 import React, { CSSProperties } from 'react';
-import { ApolloError } from '@apollo/react-hooks';
 import { FixedSizeList as List } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
 
@@ -13,7 +12,6 @@ import { ProductsWithTimestamp } from '../types';
 interface Props {
   products: ProductsWithTimestamp | undefined;
   loading: boolean;
-  error: ApolloError | undefined;
 }
 
 interface RowProps {
@@ -21,13 +19,9 @@ interface RowProps {
   style: CSSProperties;
 }
 
-const Products: React.FC<Props> = ({ products, loading, error }) => {
+const Products: React.FC<Props> = ({ products, loading }) => {
   if (loading || !products?.products) {
     return <div>Loading products...</div>;
-  }
-
-  if (error) {
-    return <div>{error}</div>;
   }
 
   const Row: React.FC<RowProps> = ({ index, style }) => (
