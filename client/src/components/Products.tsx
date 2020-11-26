@@ -35,16 +35,16 @@ const Products: React.FC<Props> = ({ products, loading }) => {
       <div className='product-manufacturer flex-item'>
         {products.products[index].manufacturer}
       </div>
-      <div className='product-availability flex-item'>
-        <Availability
-          availability={products.products[index].availability.DATAPAYLOAD}
-        />
-      </div>
       <div className='product-colors flex-item'>
         <Color colors={products.products[index].color} />
       </div>
       <div className='product-price flex-item'>
         {products.products[index].price},00€
+      </div>
+      <div className='product-availability flex-item'>
+        <Availability
+          availability={products.products[index].availability.DATAPAYLOAD}
+        />
       </div>
     </div>
   );

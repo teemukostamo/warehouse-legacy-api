@@ -1,15 +1,7 @@
-import { ApiResponse } from './types';
+import { ApiResponse, Context } from './types';
 
 interface Args {
   type: string;
-}
-
-interface Context {
-  dataSources: {
-    ProductAPI: {
-      getProducts: (type: string) => ApiResponse;
-    };
-  };
 }
 
 const resolvers = {

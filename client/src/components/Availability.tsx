@@ -8,18 +8,16 @@ interface Props {
 const Availability: React.FC<Props> = ({ availability }) => {
   switch (availability) {
     case 'INSTOCK':
-      return (
-        <ImHappy2 style={{ marginLeft: '18px' }} size={20} color='green' />
-      );
+      return <ImHappy2 style={{ marginLeft: '5px' }} size={20} color='green' />;
     case 'LESSTHAN10':
       return (
-        <ImNeutral2 style={{ marginLeft: '18px' }} size={20} color='yellow' />
+        <ImNeutral2 style={{ marginLeft: '5px' }} size={20} color='yellow' />
       );
     case 'OUTOFSTOCK':
-      return <ImSad2 style={{ marginLeft: '18px' }} size={20} color='red' />;
+      return <ImSad2 style={{ marginLeft: '5px' }} size={20} color='red' />;
     default:
       return (
-        <ImQuestion style={{ marginLeft: '18px' }} size={20} color='grey' />
+        <ImQuestion style={{ marginLeft: '5px' }} size={20} color='grey' />
       );
   }
 };

@@ -74,6 +74,10 @@ body {
 }
 
 .general-info-right {
-  text-align: right;
   float: right;
+}
+
+.list-header-container {
+  font-weight: bolder;
+  background-color: rgba(139, 157, 195, 0.4);
 }

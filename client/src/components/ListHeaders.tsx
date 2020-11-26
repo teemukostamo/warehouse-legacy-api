@@ -1,13 +1,13 @@
 import React from 'react';
 
 const ListHeaders: React.FC = () => (
-  <div className='flex-container'>
-    <div className='flex-item'>Item#</div>
-    <div className='flex-item fg-2'>Product Name</div>
-    <div className='flex-item'>Manufacturer</div>
-    <div className='flex-item'>Availability</div>
-    <div className='flex-item'>Color(s)</div>
-    <div className='flex-item'>Price</div>
+  <div className='flex-container list-header-container'>
+    <div className='flex-item list-header-item'>Item#</div>
+    <div className='flex-item fg-2 list-header-item'>Product Name</div>
+    <div className='flex-item list-header-item'>Manufacturer</div>
+    <div className='flex-item list-header-item'>Color(s)</div>
+    <div className='flex-item list-header-item'>Price</div>
+    <div className='flex-item list-header-item'>Availability</div>
   </div>
 );
 

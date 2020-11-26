@@ -4,7 +4,9 @@ The application is deployed [here](https://warehouse-legacy-api.herokuapp.com/)
 
 A Node/Apollo/Graphql/React application written in TypeScript, that fetches warehouse product availability data from a legacy rest api and serves up-to-date, fast-to-access information to warehouse workers.
 
-An initial parser for the legacy API is running [here](https://bad-api-parser.herokuapp.com/), and the repository for the parser is [here](https://github.com/teemukostamo/bad-api-parser)
+An initial parser for the legacy API is running [here](https://bad-api-parser.herokuapp.com/), and the repository for the parser is [here](https://github.com/teemukostamo/bad-api-parser).
+
+---
 
 ## Installing / Getting started
 
@@ -47,7 +49,9 @@ Jest test library is used for testing the server, and Cypress is used for E2E te
 - To build a Docker image of the repository, run `docker build -t warehouse-legacy-api .` in the root directory.
 - To run the container, run `docker run -p 4000:4000 warehouse-legacy-api`
 
-The dockerized application serves the static build of the client from the server. and attempts to connect the client to the deployed server specified at the variable `REACT_APP_APOLLO_URI=<deployed-app-url>/graphql` in `.env.production.local` file. If the `.env.production.local` file is not present, the client will try to connect to `REACT_APP_APOLLO_URI=http://localhost:4000/graphql` specified at `.env.local`
+The dockerized application serves the static build of the client from the server and attempts to connect the client to the deployed server specified at the variable `REACT_APP_APOLLO_URI=<deployed-app-url>/graphql` in `.env.production.local` file.
+
+If the `.env.production.local` file is not present, the client will try to connect to `REACT_APP_APOLLO_URI=http://localhost:4000/graphql` specified at `.env.local`
 
 # Licensing
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import AvailabilityExplanation from './AvailabilityExplanation';
 
 interface Props {
   productCount: number;
@@ -12,15 +13,18 @@ const ListMetaData: React.FC<Props> = ({
   timestamp,
 }) => (
   <div className='general-info'>
-    <span className='general-info-left'>
+    <h4 style={{ textAlign: 'center' }}>
       Showing {productCount} {productType}.
-    </span>
+    </h4>
     <br />
     <br />
-    <span className=''>
+    <span className='general-info-left'>
       Data fetched on
       <br />
       {timestamp}
+    </span>
+    <span className='general-info-right'>
+      <AvailabilityExplanation />
     </span>
   </div>
 );

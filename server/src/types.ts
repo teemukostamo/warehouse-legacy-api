@@ -17,3 +17,11 @@ export interface ApiResponse {
   products: Product[];
   timestamp: string;
 }
+
+export interface Context {
+  dataSources: {
+    ProductAPI: {
+      getProducts: (type: string) => ApiResponse;
+    };
+  };
+}
