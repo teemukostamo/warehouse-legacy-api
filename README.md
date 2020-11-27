@@ -29,12 +29,13 @@ In production mode the Express server serves a static build of the client at `/`
 
 ## Testing & Linting
 
-Jest test library is used for testing the server, and Cypress is used for E2E tests. The application is configured to use most of the AirBnB ESlint plugin rules. The server and client have their own `.eslintrc` configurations, in `/` and `/client/` folders respectively.
+Jest test library is used for testing the server with `apollo-server-testing`, and Cypress is used for E2E tests. The application is configured to use most of the AirBnB ESlint plugin rules. The server and client have their own `.eslintrc` configurations, in `/` and `/client/` folders respectively.
 
 - Run `npm run test` in the root directory to perform server tests
 - To run Cypress E2E tests, make sure the client and server are running, then run `npm run cypress:open` in a third terminal window.
 - Run `npm run lint` in the root directory to lint the server files.
 - `cd client` and run `npm run lint` to lint the client files.
+- Run `npm run precommit` to run server tests, linting and compiling files to JavaScript
 
 ## Deploying to Heroku
 
